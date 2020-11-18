@@ -10,5 +10,6 @@ T : Typescript
 #HOW TO RUN THIS REPO
 
 1. Clone this repo to your machine using git clone
-2. run yarn start or npm start and the application should start on port 3000
+2. Run yarn install or npm install to install all dependencies
+3. run yarn start or npm start and the application should start on port 3000
 
