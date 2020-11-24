@@ -20,10 +20,11 @@ type Staff {
     
 type Mutation {
     addStaff(id: String, name: String, rank: String, gender: String, bio: String, unit: String ): Staff
+    removeStaffById(id: String): Staff
+    removeStaffByName(id: String, name: String, gender: String, unit: String, rank: String, bio: String): Staff
 }
     
-    
-    `
+`
 
 
 
