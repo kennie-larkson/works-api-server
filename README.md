@@ -1,10 +1,12 @@
 # works-api-server
 
-# This is the api server for a MERNT STACK application.
+# This is the api server for a GARMENT STACK application.
 
+G : Graphql
+A : Apollo
+R : React
 M : MongoDB
 E : Express
-R : React
 N : Node
 T : Typescript
 
