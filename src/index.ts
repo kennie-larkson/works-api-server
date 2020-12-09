@@ -7,7 +7,7 @@ import  typeDefs  from "./graphql/schema";
 import resolvers from "./graphql/resolvers";
 
 const app = express();
-const port = 5000;
+const port = process.env.PORT||5000;
 
 
 app.use("/graphql", cors(), express.urlencoded({extended: true}));
