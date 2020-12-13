@@ -8,15 +8,18 @@ import resolvers from "./graphql/resolvers";
 
 
 const app = express();
-const port = process.env.PORT||5000;
 
 app.use(cors());
 app.use(express.urlencoded({extended: true}));
 
+const port = process.env.PORT||5000;
+
+
+
 // app.use("/graphql", cors(), express.urlencoded({extended: true}));
-app.get("/getStaffs", (req, res) => {
-  res.json({msg: "CORS Enabled globally"});
-});
+// app.get("/getStaffs", (req, res) => {
+//   res.json({msg: "CORS Enabled globally"});
+// });
 
 const apolloServer = new ApolloServer({
   typeDefs,
@@ -26,7 +29,7 @@ const apolloServer = new ApolloServer({
 });
 
 
-apolloServer.applyMiddleware({app, path: "https://localhost:3000"});
+apolloServer.applyMiddleware({app,});
 
 app.listen(port, () => {
     console.log(`Server listening on port ${port}...`);
