@@ -1,6 +1,9 @@
 {
   "name": "works-api-server",
   "version": "1.0.0",
+  "engines": {
+    "node": "12.16.1"
+  },
   "description": "an apollo-express server for a MERNT stack application",
   "main": "index.ts",
   "repository": "https://github.com/kennie-larkson/works-api-server.git",
