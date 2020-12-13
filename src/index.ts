@@ -10,8 +10,10 @@ import resolvers from "./graphql/resolvers";
 const app = express();
 const port = process.env.PORT||5000;
 
+app.use(cors());
+app.use(express.urlencoded({extended: true}));
 
-app.use("/graphql", cors(), express.urlencoded({extended: true}));
+// app.use("/graphql", cors(), express.urlencoded({extended: true}));
 
 
 const apolloServer = new ApolloServer({
