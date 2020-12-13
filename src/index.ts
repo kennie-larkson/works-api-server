@@ -12,10 +12,6 @@ const app = express();
 app.use(cors());
 app.use(express.urlencoded({extended: true}));
 
-const port = process.env.PORT||5000;
-
-
-
 // app.use("/graphql", cors(), express.urlencoded({extended: true}));
 // app.get("/getStaffs", (req, res) => {
 //   res.json({msg: "CORS Enabled globally"});
@@ -29,7 +25,9 @@ const apolloServer = new ApolloServer({
 });
 
 
-apolloServer.applyMiddleware({app,});
+apolloServer.applyMiddleware({app});
+
+const port = process.env.PORT||5000;
 
 app.listen(port, () => {
     console.log(`Server listening on port ${port}...`);
