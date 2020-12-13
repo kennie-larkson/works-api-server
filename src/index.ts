@@ -26,7 +26,7 @@ const apolloServer = new ApolloServer({
 });
 
 
-apolloServer.applyMiddleware({app});
+apolloServer.applyMiddleware({app, cors:false});
 
 app.listen(port, () => {
     console.log(`Server listening on port ${port}...`);
