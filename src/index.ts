@@ -14,7 +14,9 @@ app.use(cors());
 app.use(express.urlencoded({extended: true}));
 
 // app.use("/graphql", cors(), express.urlencoded({extended: true}));
-
+app.get("/getStaffs", (req, res) => {
+  res.json({msg: "CORS Enabled globally"});
+});
 
 const apolloServer = new ApolloServer({
   typeDefs,
